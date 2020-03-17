@@ -1,0 +1,32 @@
+h1{
+    font-family: 'Alfa Slab One';
+    font-size: 36px;
+    padding-top: 1%;
+    text-align: center;
+}
+
+#container{
+    border: 5px solid tomato;
+    padding: 7px;
+    position: absolute;
+    right: 40%;
+    font-family: 'Bellota',cursive;
+    font-size: 20px;
+}
+
+button{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-radius: 4px;
+    font-family: 'TeX Gyre';
+    transition-duration: 0.4s;
+ 
+}
+
+button:hover{
+
+}
+
+label{
+    margin-bottom: 4%;
+}
