@@ -1,6 +1,9 @@
 
 var submitBtn=document.querySelector("#submitBtn");
-
+var radio=document.querySelectorAll("#currency");
+var amount=document.getElementById("amount");
+var tip=document.getElementById("tip");
+console.log(radio[0]);
 
 function checkForLegalInput(tip,amount,flag){
     if (isNaN(tip) || isNaN(amount)){
@@ -11,20 +14,25 @@ function checkForLegalInput(tip,amount,flag){
     }
 }
 
-function calcResult(tip,amount){
-   //alert(amount*tip*0.01);
+function calcResult(tip,amount,currType){
    var res=document.querySelector("span");
-   res.textContent="You need to add: "+amount*tip*0.01+"$";
+   var type="-";
+   for(var i=0;i<radio.length;i++){
+       if(radio[i].checked){
+            type=radio[i].value;
+       }
+   }
+   
+   res.textContent="You need to add: "+amount*tip*0.01+type;
 }
 
 
-
 submitBtn.addEventListener("click",function(){
-    var amount=document.getElementById("amount").value;
-    var tip=document.getElementById("tip").value;
     var flag={value:false};
-    checkForLegalInput(tip,amount,flag)
+    checkForLegalInput(tip.value,amount.value,flag)
     if(flag.value){
-        calcResult(tip,amount)
+        calcResult(tip.value,amount.value)
     } 
 });
+
+

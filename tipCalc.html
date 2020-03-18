@@ -9,12 +9,21 @@
         <hr>
         <form>
         <div id="container">
-                <label for="amount">Set amount:</label><br>
-                <input type="text" id="amount"><br>
-                <label for="tip">Set tip % that you want to share:</label><br>
-                <input type="text" id="tip"><br>
-                <button type="button" id="submitBtn">Calculate result</button><br>
-                <span></span>
+            Set amount:<br>
+            <input type="text" id="amount"><br>
+            Set tip % that you want to share:<br>
+            <input type="text" id="tip"><br>
+            Set currency type:<br>
+            <form name="currencyType">
+                <input type="radio" id="currency" name="currRadioBtn" value="₪" checked>
+                <label for="NIS">₪</label>
+                <input type="radio" id="currency" name="currRadioBtn" value=$>
+                <label for="$">$</label>
+                <input type="radio" id="currency" name="currRadioBtn" value=€>
+                <label for="€">€</label>
+            </form>
+            <button type="button" id="submitBtn">Calculate result</button><br>
+            <span></span>
         </div>
 
     </body>

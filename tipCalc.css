@@ -47,6 +47,10 @@ label{
     margin-bottom: 4%;
 }
 
-input{
+input[type=text]{
     margin: 1% auto;
+}
+
+input[type=radio]{
+    margin: auto 2%
 }
